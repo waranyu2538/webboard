@@ -20,7 +20,16 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::prefix('login')->group(function () {
+	Route::prefix('login')->group(function () {
     Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
     Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.provider.callback');
 });
+
+	Route::get('/profile', function () {
+    return view('profile');
+});
+
+		Route::get('/profile1', function () {
+    return view('profile1');
+});
+

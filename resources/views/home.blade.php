@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                        <a class="btn btn-info" href="{{}}">
+  Edit
+</a>
                 </div>
             </div>
         </div>
