@@ -11,25 +11,42 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+
+
+/*Route::get('show1','Controller1@show1');*/
+
+Route::get('user/group',function(){
+	 return view('user/group');
 });
 
-Auth::routes();
+	Route::get('user/group/tp_programer', function () {
+			return view('user/topic/tp_programer');
+	});
 
-Route::get('/home', 'HomeController@index')->name('home');
+		Route::get('user/group/tp_programer/clanguage', function () {
+				return view('user/topic/viewtopic/clanguage');
+		});
 
-
-	Route::prefix('login')->group(function () {
-    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
-    Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.provider.callback');
+Route::get('user/group2',function(){
+	 return view('user/group2');
 });
 
-	Route::get('/profile', function () {
-    return view('profile');
+
+/*Route::get('group', function () {
+    return redirect('user/group');
+});*/
+
+/*
+Route::get('/header',function(){
+	 return view('header');
 });
 
-		Route::get('/profile1', function () {
-    return view('profile1');
-});
+Route::get('/adddata',function(){
+	 return view('adddata');
+});*/
 
+Route::resource('user','UsersController');
