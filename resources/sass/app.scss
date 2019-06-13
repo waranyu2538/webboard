@@ -6,3 +6,7 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.breadcrumb:before {
+    color: #00ff00;
+}
